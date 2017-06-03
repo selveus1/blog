@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<br>
+	<div class="row sub-header">
+		<a href="/blog/newpost" class="centered-links">
+			<h2>Write a New Entry</h2>
+		</a>
+	</div>
+
+	<div class="row error">{{error}}</div>
+
+	<div class="row recent-posts">
+		<h3>Most Recent Posts</h3>
+	</div>
+	
+	<div class="row posts">
+		{% if posts %}
+			{% for blog_post in posts %}
+				
+				<div class="row post">
+					<div class="col-9 post-heading">
+						<div class="post-subject"><a href="{{blog_post.link_key}}">{{blog_post.subject}} by {{blog_post.poster}}</a></div>
+						<div class="post-created">{{blog_post.readable_created}}</div>
+					</div>
+
+					<div class="col-9 post-bottom">
+						<pre class="post-body">{{blog_post.content}}</pre>
+					</div>
+				</div>
+				<br>
+				<br>
+				<br>
+			{% endfor %}
+		{% endif %}
+	</div>
+
+
+	<div class="row no-post">
+		<h3>{{no_posts}}</h3>
+	</div>
+
+
+{% endblock %}

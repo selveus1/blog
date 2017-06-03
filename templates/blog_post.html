@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+		
+	<div class="row score-area">
+		<label class="like-score">{{likes}} Likes </label>
+		|
+		<label class="unlike-score">{{unlikes}} Unlikes</label>
+	</div>
+
+	<div class="row score-area">
+		
+		[ <a class="like-link" href="/blog/like/{{post_id}}"><b>Like Post</b></a>
+		-
+		<a class="unlike-link" href="/blog/unlike/{{post_id}}"><b>Unlike Post</b></a> ]
+		<br>
+		<br>
+	</div>
+
+	<div class="row sub-header">
+		<h2>{{error}}</h2>
+	</div>
+	
+	<br>
+	<br>
+
+	<div class="row user-mods">
+		<a class="col-6 mod-link" href="/blog/edit/{{post_id}}"><b>Edit Post</b></a>
+		<a class="col-6 mod-link" href="/blog/delete/{{post_id}}"><b>Delete Post</b></a>
+	</div>
+	
+		
+
+	<div class="row post">
+		<div class="col-9 post-heading">
+			<div class="post-subject">{{blog_post.subject}} by {{blog_post.poster}}</div>
+			<div class="post-created">{{blog_post.readable_created}}</div>
+		</div>
+		<div class="col-9 post-bottom">
+			<pre class="post-content">{{blog_post.content}}</pre>		
+		</div>
+	</div>	
+
+
+	<br>
+	<br>
+
+
+	<div class="row comments">
+
+		<div class="row comment-header">
+			<h3> Comments</h3>
+		</div>
+		
+	
+		{% if comments %}
+			{% for comment in comments %}
+				<div class="row comment">
+					<br>
+					
+					<div class="row comment-body">			
+						<pre class="comment-body">[ <b>{{comment.poster}}</b> on {{comment.readable_created}} ]  -  {{comment.remark}}</pre>
+					</div>
+
+					<div class="row comment-mods">
+						<a class="edit-link" href="/editcomment/{{comment.link_key}}">edit</a>
+							|	
+						<a class="delete-link" href="/deletecomment/{{comment.link_key}}">delete</a>
+					</div>
+
+					<br>
+					<br>
+					<hr class="comment-divider">
+				</div>
+			{% endfor %}
+		{% endif %}
+
+		<div class="row add-comments">
+			<form action="/newcomment/{{post_id}}" method="get" value="submit-comment">
+				<input type="submit" id="comment-button" name="add-comment" value="Add Comment">
+			</form>
+		</div>
+	</div>
+
+
+	<br>
+	<br>
+
+
+	
+	<br>	
+
+{% endblock %}

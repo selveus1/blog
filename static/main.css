@@ -1,0 +1,258 @@
+/*
+    Author :        Sheena Elveus
+    Date   :        May 17 2017
+    Description:    CSS file for markup
+*/
+
+*{
+	color: white;
+}
+
+body{
+	background-color: #135259;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+
+h2, h3, form, .centered-links{
+	margin: 0 auto;
+}
+
+
+.base-header, .login-area, .score-area{
+	padding-left: 30px;
+}
+
+
+.login-link{
+	padding-right: 20px;
+}
+
+.like-score{
+	padding-right: 40px;
+}
+
+.like-link{
+	padding-right: 20px;
+}
+
+.register-link{
+	padding-left: 25px;
+}
+
+.unlike-score{
+	padding-left:40px;
+}
+
+.unlike-link{
+	padding-left: 30px;
+}
+
+.welcome, .logout{
+	text-align: center;
+}
+
+.sub-header{
+	text-align: center;
+}
+
+.posts{
+	margin: 5% 0px;
+}
+
+.post{
+	margin: 2% 0px;
+}
+
+.post-heading, .post-bottom{
+	margin: 0 auto;
+}
+
+.no-post{
+	width: 50%;
+	padding-top: 20px;
+}
+
+
+.button{
+	color: #ffffff;
+	background: #a8a8a8;
+	padding: 5px 5px 5px 5px;
+	margin: 20px 45.5%;
+	text-align: center;
+}
+
+.button:hover {
+	background: #3cb0fd;
+	background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+	text-decoration: none;
+}
+
+#comment-button{
+	margin-top: 10px;
+	margin-bottom: 2px;
+	color: #ffffff;
+	background: #a8a8a8;
+	padding: 5px 5px 5px 5px;
+	text-align: center;
+}
+
+.new-entry{
+	margin-left: 40%;
+	margin-right: 40%;
+	text-align: center;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input[type=text], input[type=password] {
+	width: 500px;
+	font-size: 20px;
+	padding: 2px;
+	margin-bottom: 5px;
+	font-family: monospace;
+	color: black;
+}
+
+
+.error {
+    color: red;
+}
+
+
+.post-heading {
+    position: relative;
+    border-bottom: 3px solid #ffffff;
+}
+
+.post-subject {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.post-created {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+
+.user-mods, .display-ratings, .rate{
+	width:	    100%;
+    display:	flex;
+    flex-wrap:  wrap;
+    margin-bottom: 10px;
+}
+
+
+
+.like, .unlike, input[type=checkbox]{
+	margin:10px auto;
+}
+
+.form{
+	width: 50%;
+} 
+
+.rating-form{
+	margin: 5px auto;
+	width:100%;
+}
+
+.options{
+	margin-left: 45%;
+	width: 16%;
+}
+
+#rating-button{
+	margin-top: 10px;
+	margin-left: 46%;
+	margin-bottom: 2px;
+}
+
+
+.comment{
+	width:75%;
+	text-align: center;
+	margin: 10px auto;
+}
+
+.comment-body{
+	margin: 20px auto;
+}
+
+.comments{
+	margin-top: 15%;
+}
+
+b{
+	color: #eae017;
+}
+
+.write-comment, .write-post{
+	text-align: center;
+}
+
+.content {
+	width: 500px;
+	height: 400px;
+	font-size: 17px;
+	font-family: monospace;
+	color: black;
+}
+
+
+.remark {
+	width: 500px;
+	height: 200px;
+	font-size: 17px;
+	font-family: monospace;
+	color: black;
+}
+
+.new-post-btn{
+	color: #ffffff;
+	background: #a8a8a8;
+	padding: 5px 5px 5px 5px;
+	margin: 20px 45%;
+}
+
+
+.new-comment-btn{
+	margin: 20px 40%;
+	color: #ffffff;
+	background: #a8a8a8;
+	padding: 5px 5px 5px 5px;
+	text-align: center;
+}
+
+#new-post, #new-subject{
+	margin: 5px 0px;
+}
+
+.cancel, .mod-link{
+	text-align: center;
+}
+
+.edit-link, .delete-link{
+	text-align: center;
+	margin: 0 auto;
+}
+
+hr{
+	width: 75%;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="/static/framework.css" />
+		<link type="text/css" rel="stylesheet" href="/static/responsive.css" />
+		<link type="text/css" rel="stylesheet" href="/static/main.css" />
+		
+		<title>CS 253 Blog</title>
+		{{redirect | safe }}
+	</head>
+
+	<body>
+
+		<div class="row base-header">
+			<a href="/blog">
+				<h1 >CS 253 Blog</h1>
+			</a>
+		</div>
+
+		<div class="row login-area">
+			{% if user %}
+				{{user.username}} (<a class="logout-link" href="/logout">logout</a>)
+			{% else %}
+				<a class="login-link" href="/login">login</a>
+				|
+				<a class="register-link" href="/register">register</a>
+			{% endif %}
+		</div>
+
+		<div class="container">
+			{% block content %}
+			{% endblock %}
+		</div>
+	</body>
+
+</html>

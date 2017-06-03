@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<br>
+
+	<div class="row sub-header">
+		<h2>Editing comment </h2>
+	</div
+
+	<div class="row error">
+		<h3>{{error}}</h3>
+	</div>
+
+	<div class="row edit-comment">
+		<form method="post">
+			<br>
+			<label>
+				<div id="new-comment">comment</div>
+				<textarea class="remark" name="edit-comment" value="{{comment.remark}}">{{comment.remark}}</textarea>
+			</label>
+
+			<br>
+
+			<input type="submit" class="new-comment-btn" name="submit">
+			<br>
+			<div class="cancel">
+				<a href="/blog/{{blog_id}}">Cancel</a>
+			</div>
+		</form>
+	</div>
+	
+	
+
+	<br>
+
+{% endblock %}

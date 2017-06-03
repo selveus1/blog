@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<br>
+
+	<div class="row sub-header">
+		<h2>Editing {{blog_post.subject}} </h2>
+	</div>
+	
+	<div class="row edit-post">
+		<form method="post">
+			<label>
+				<div id="new-subject">subject</div>
+				<input type="text" name="edit-subject" value="{{blog_post.subject}}">
+			</label>
+
+			<br>
+			<br>
+
+			<label>
+				<div id="new-post">blog post</div>
+				<textarea class="content" name="edit-content" value="{{blog_post.content}}">{{blog_post.content}}</textarea>
+			</label>
+			
+			<br>
+			<br>
+
+			<div class="error">{{error}}</div>
+			
+			<input type="submit" class="button" name="submit">
+			
+			<br>
+
+			<div class="cancel">
+				<a href="/blog/{{blog_id}}">Cancel</a>
+			</div>
+		</form>
+	</div>
+	
+	
+	
+
+	<br>
+{% endblock %}

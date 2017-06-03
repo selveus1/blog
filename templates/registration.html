@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<br>
+	<div class="row sub-header">
+		<h2>Register</h2>
+	</div>
+	
+	<div class="row registration-form">
+		<form method="post">
+			<table class="inputs">
+				<tr>
+					<td class="label">Username</td>
+					<td><input type="text" name="username" value="{{username}}"></td>
+					<td class="error">{{uname_error}}</td>
+				</tr>
+
+				<tr>
+					<td class="label">Password</td>
+					<td><input type="password" name="password" value=""></td>
+					<td class="error">{{pword_error}}</td>
+				</tr>
+
+				<tr>
+					<td class="label">Verify Password</td>
+					<td><input type="password" name="verify" value=""></td>
+					<td class="error">{{verify_error}}</td>
+				</tr>
+
+				<tr>
+					<td class="label">Email (optional)</td>
+					<td><input type="text" name="email" value="{{email}}"></td>
+					<td class="error">{{email_error}}</td>
+				</tr>
+			</table>
+
+			<input type="submit" class="button">
+			
+		</form>
+	</div>
+
+	
+{% endblock %}

@@ -1,0 +1,56 @@
+/*
+    Author :        Sheena Elveus
+    Date   :        May 17 2017
+    Description:    CSS file to generate framework of markup
+*/
+
+* {
+    -webkit-box-sizing:	border-box;
+    -moz-box-sizing:	border-box;
+    -ms-box-sizing:		border-box;
+}
+
+.container{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 5%;
+ }
+
+
+ .row{
+ 	width:			100%;
+ 	display:		flex;
+    flex-wrap:  	wrap;
+    margin-bottom: 	10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col-1 {
+    width:	8.33%;
+}
+
+.col-3 {
+    width:	25%;
+}
+
+.col-4 {
+    width:	33.33%;
+}
+
+.col-6 {
+    width:	50%;
+}
+
+.col-8 {
+    width:	66.66%;
+}
+
+.col-9 {
+    width:	75%;
+}
+
+.col-12 {
+    width:	100%;
+}
